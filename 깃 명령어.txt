@@ -1,3 +1,5 @@
+git reset HEAD^
+
 원격 저장소 확인
 git remote -v
 
@@ -6,11 +8,14 @@ git remote -v
 git remote rm origin
 
 원격 저장소 추가
-git remote add origin https://github.com/계정이름/저장소이름.git
-
+git remote add origin https://github.com/sms7703/pythonstudy.git
+만약 already exiset (이전꺼 연결되어 있음) 오류시
+git remote remove origin  사용해서 삭제해도 안되면 
+git reset HEAD^    < 최근 커밋 삭제
 
 git init
 git add .
-git commit -m "커밋내용"
-git remote add origin https://github.com/계정이름/저장소이름.git
+git commit -m "20240109"
+git push origin main < 확인필요
+git remote add origin https://github.com/sms7703/pythonstudy.git
 git push -u origin master
